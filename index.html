@@ -1,124 +1,151 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevRick</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevCHRS</title>
+  <link rel="stylesheet" href="assets/style/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
-
 
 <body>
 
+  <header>
+    <h1><strong>DevCHRS</strong></h1>
+    <nav class="redes">
+      <a href="https://github.com/IsHirog"><i class="fa fa-github"></i></a>
+      <a href="https://www.instagram.com/Christian_gah/"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/jos%C3%A9-riquelme-teixeira-da-silva-4451b52b9/"><i
+          class="fa fa-linkedin"></i></a>
+    </nav>
+  </header>
 
-    <header>
-        <h1><strong>DevRick<strong></h1>
-          <div class="redes">
-          <a href="https://github.com/JoseRiquelmeTds"><i class="fa fa-github"></i></a>
-          <a href="https://www.instagram.com/zeriquelme/"><i class="fa fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/jos%C3%A9-riquelme-teixeira-da-silva-4451b52b9/"><i class="fa fa-linkedin"></i></a>
-         </div>
-    </header>
+  <main>
+    <section class="hero">
+      <div class="textos">
+        <p class="Opa">Olá, eu sou o Christian! 👋</p>
+        <h1><span>Full</span>stack Developer</h1>
+        <h1><span>Embedded</span> Systems Developer</h1>
+        <p class="desc">Sou um desenvolvedor diferente — não só inovo, eu crio.</p>
+        <div class="botoes">
+          <a href="https://wa.me/+5582993243965?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20projetos."
+            target="_blank">Fale comigo!</a>
+          <a href="#projetos">Projetos</a>
+        </div>
+      </div>
+      <figure class="foto">
+        <img src="assets/img/me.jpg" alt="Foto de Chris">
+      </figure>
+    </section>
 
-    <main>
-        <section class="hero"> 
+    <section class="projetos" id="projetos">
+      <div class="titulo">
+        <h1>./<span>Projetos</span></h1>
+      </div>
 
-            <div class="textos">
-                <p class="Opa">Opa, eu sou o Riquelme! 👋</p>
-                <h1><span>Back</span>end Developer</h1>
-                <p class="desc">Sou um desenvolvedor diferente — não só programo, eu inovo.</p>
-
-                <div class="botoes">
-                    <a href="https://wa.me/+5587981758225?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20projetos.                    #contato">Fale comigo!</a>
-                    <a href="#projetos">Projetos</a>
-                </div>
-            </div>
-
-            <figure class="foto">
-                <img src="Riquelme.jpg" alt="Foto de Riquelme">
-            </figure>
-
-        </section>
-
-
-        <section class="projetos" id="projetos">
-            <div class="titulo">
-                <h1>./<span>Projetos</span></h1>
-            </div>
-
-
-            <div class="all-cards">
-
-                <div class="card">
-
-                    <div class="image-wrapper">
-                      <img src="rsa.png" alt="Interface software de criptografia RSA">
-                    </div>
-
-                    <div class="card-content">
-                      <h2>Criptografia RSA</h2>
-                      <p>Projeto desenvolvido em C, C++ e com interface gráfica usando Qt, que implementa o algoritmo RSA com base em conceitos de Matemática Discreta — como aritmética modular, teorema de Euler e números primos. A aplicação permite gerar chaves, criptografar e descriptografar mensagens de forma didática, conectando teoria e prática com foco educacional e visual intuitivo.
-                      </p>
-                    </div>
-                    <div class="card-footer">
-                      <a href="https://github.com/JoseRiquelmeTds/Projeto-Criptografia-RSA-Matematica-Discreta"><i class="fa fa-github"></i></a>
-                    </div>
-                </div>
-
-                <div class="card">
-
-                    <div class="image-wrapper">
-                      <img src="Huffman.png" alt="Interface software de criptografia RSA">
-                    </div>
-
-                    <div class="card-content">
-                      <h2>Codificação de Huffman</h2>
-                      <p>Implementação completa do algoritmo de compressão de Huffman, escrita 100% em C. O projeto aborda desde a construção da árvore binária de frequências até a geração dos códigos binários para compressão e descompressão de arquivos. Ideal para quem quer entender, na prática, como funciona um dos métodos clássicos de codificação de prefixo usados em compressão sem perdas.</p>
-                    </div>
-                    <div class="card-footer">
-                      <a href="https://github.com/PedroN3ves/Projeto_AB2_ED/tree/main/Codificacao_Huffman"><i class="fa fa-github"></i></a>
-                    </div>
-                </div>
-
-                <div class="card">
-
-                    <div class="image-wrapper">
-                      <img src="sat-solver.png" alt="Interface software de criptografia RSA">
-                    </div>
-
-                    <div class="card-content">
-                      <h2>SAT solver</h2>
-                      <p>Este projeto implementa um SAT Solver do zero, utilizando a linguagem C, com foco em resolver fórmulas booleanas na forma normal conjuntiva (CNF). O algoritmo verifica a satisfatibilidade de expressões lógicas, um problema central na teoria da complexidade computacional e base para diversas aplicações em verificação formal, inteligência artificial e sistemas automáticos. A implementação prioriza eficiência e clareza, com parsing de entrada padronizada e avaliação lógica estruturada.</p>
-                    </div>
-                    <div class="card-footer">
-                      <a href="https://github.com/PedroN3ves/Projeto_AB2_ED/tree/main/SAT_solver"><i class="fa fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section class="sobre-mim" id="about">
-          <div class="titulo">
-            <h1>/<span>Sobre mim</span></h1>
+      <div class="all-cards-grid">
+        <div class="card-item">
+          <div class="card-image">
+            <img src="assets/img/dashboard-myna.png" alt="Interface software com Next.js framework Mynaui">
           </div>
-
-
-          <div>
-            <p>
-            Sou estudante de Ciência da Computação na UFAL e desenvolvedor backend, atualmente no 3º período da graduação. Programo desde muito novo — o que começou como curiosidade se transformou em uma paixão por construir sistemas robustos, organizados e eficientes.<br><br>
-
-            Tenho um interesse especial por engenharia de dados e otimização de processos no backend. Atualmente, participo de um projeto de pesquisa no Laboratório Orion, onde desenvolvo uma revisão sistemática sobre como dashboards influenciam a tomada de decisão em órgãos governamentais que utilizam Data Lakes Lógicos. Essa experiência tem expandido minha visão sobre arquitetura de dados e infraestrutura voltada para o setor público. <br><br>
-            
-            Também sou entusiasta de maratonas de programação, onde exploro minha afinidade com lógica, algoritmos e resolução de problemas. Acredito que a base de um bom sistema está em um backend sólido, bem estruturado e pensado para escalar. <br><br>
-            
-            Estou sempre buscando aprender, evoluir como desenvolvedor e contribuir com soluções que façam sentido na prática. <br><br>
-            </p>
+          <div class="card-info">
+            <h2>Interface com Next.js</h2>
+            <p>Este repositório contém um projeto de dashboard desenvolvido usando Next.js, React, Tailwind CSS, e
+              componentes Myna/ShadCN. Ele simula um sistema de gerenciamento de alunos para uma academia...</p>
           </div>
-        </section>
-    </main>
+          <div class="card-actions">
+            <a href="https://github.com/IsHirog/dashboard-myna" target="_blank"><i class="fa fa-github"></i></a>
+          </div>
+        </div>
+
+        <div class="card-item">
+          <div class="card-image">
+            <img src="assets/img/Huffman.png" alt="Chat com Gemini AI - Lógica Proposicional">
+          </div>
+          <div class="card-info">
+            <h2>Gemini AI-Lógica Proposicional</h2>
+            <p>Este repositório "Chat com Gemini AI - Lógica Proposicional e Dedução Natural" é uma aplicação web
+              simples em Flask que usa a API Gemini...</p>
+          </div>
+          <div class="card-actions">
+            <a href="https://github.com/IsHirog/ChatDeLogicaLLM" target="_blank"><i
+                class="fa fa-github"></i></a>
+          </div>
+        </div>
+
+        <div class="card-item">
+          <div class="card-image">
+            <img src="assets/img/sat-solver.png" alt="Criptografia RSA com GMP">
+          </div>
+          <div class="card-info">
+            <h2>RSA-GMP</h2>
+            <p>O repositório "RSA em C com GMP" implementa o algoritmo RSA (geração de chaves, criptografia,
+              descriptografia) em C usando a biblioteca GMP para grandes números.</p>
+          </div>
+          <div class="card-actions">
+            <a href="https://github.com/IsHirog/RSA" target="_blank"><i
+                class="fa fa-github"></i></a>
+          </div>
+        </div>
+
+        <div class="card-item">
+          <div class="card-image">
+            <img src="assets/img/hand-robot.png" alt="Braço Robótico Hand'se">
+          </div>
+          <div class="card-info">
+            <h2>Hand'se - Braço Robótico</h2>
+            <p>Projeto de um braço robótico controlado por Arduino e visão computacional em Python, permitindo
+              movimentos via serial ou gestos. Integração com PCA9685 e servos para interação com o ambiente.</p>
+          </div>
+          <div class="card-actions">
+            <a href="https://github.com/IsHirog/Hand-se.git" target="_blank"><i class="fa fa-github"></i></a>
+          </div>
+        </div>
+
+        <div class="card-item">
+          <div class="card-image">
+            <img src="assets/img/link-shortener.png" alt="Interface do Encurtador de Links EncurtaCu">
+          </div>
+          <div class="card-info">
+            <h2>Encurtador de URLs</h2>
+            <p>Um encurtador de URLs desenvolvido em Java com Spring Boot para criar, armazenar e redirecionar links
+              curtos para URLs originais, utilizando Spring MVC, Spring Data JPA e MySQL.</p>
+          </div>
+          <div class="card-actions">
+            <a href="https://github.com/IsHirog/EncurtaCu" target="_blank"><i class="fa fa-github"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="sobre-mim" id="about">
+      <div class="titulo">
+        <h1>/<span>Sobre mim</span></h1>
+      </div>
+      <div>
+        <p>
+          Sou Christian Gabriel, estudante de Engenharia da Computação, apaixonado por tecnologia, inovação e pelo
+          desenvolvimento de soluções embarcadas. Tenho experiência prática com sistemas embarcados, inteligência
+          artificial aplicada, integração de hardware com software, além de desenvolvimento de software em linguagens
+          como Java, Python e C++.
+        </p>
+        <p>
+          Atualmente, sou bolsista no Centro de Inovação Edge. Participei de diversos hackathons e desafios, incluindo o
+          Arduino Challenger — no qual fui campeão — e o 1º Desafio de Inovação do Detran Alagoas, onde fui finalista
+          entre os cinco melhores colocados. Entre meus projetos, destaco um braço robótico, sistemas de criptografia e
+          uma aplicação web com análise baseada em machine learning.
+        </p>
+        <p>
+          Busco sempre aplicar meus conhecimentos em soluções com impacto real, tanto no meio acadêmico quanto social.
+          Acredito no poder da tecnologia como agente de transformação e estou em constante busca por novos aprendizados
+          e desafios.
+        </p>
+      </div>
+    </section>
+  </main>
 
 </body>
+
 </html>

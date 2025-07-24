@@ -2,21 +2,20 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DevCHRS</title>
-  <link rel="stylesheet" href="assets/style/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/style/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 
 <body>
-
   <header>
     <h1><strong>DevCHRS</strong></h1>
     <nav class="redes">
-      <a href="https://github.com/IsHirog"><i class="fa fa-github"></i></a>
-      <a href="https://www.instagram.com/Christian_gah/"><i class="fa fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/christian-gabriel-da-silva-sabino-482756243/"><i
+      <a href="https://github.com/IsHirog" target="_blank"><i class="fa fa-github"></i></a>
+      <a href="https://www.instagram.com/Christian_gah/" target="_blank"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/christian-gabriel-da-silva-sabino-482756243/" target="_blank"><i
           class="fa fa-linkedin"></i></a>
     </nav>
   </header>
@@ -26,7 +25,7 @@
       <div class="textos">
         <p class="Opa">Olá, eu sou o Christian! 👋</p>
         <h1><span>Full</span>stack Developer</h1>
-        <h1><span>Embedded</span> Systems Developer</h1>
+        <h1><span class="vermelho">Embedded</span> Systems Developer</h1>
         <p class="desc">Sou um desenvolvedor diferente — não só inovo, eu crio.</p>
         <div class="botoes">
           <a href="https://wa.me/+5582993243965?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20projetos."
@@ -34,9 +33,15 @@
           <a href="#projetos">Projetos</a>
         </div>
       </div>
-      <figure class="foto">
-        <img src="assets/img/me.jpg" alt="Foto de Chris">
-      </figure>
+      <div class="foto-externa">
+        <div class="borda-giratoria"></div> <!-- só borda animada -->
+        <div class="foto">
+          <img src="assets/img/me.jpg" alt="Minha foto" />
+        </div>
+      </div>
+
+      </div>
+
     </section>
 
     <section class="projetos" id="projetos">
@@ -45,9 +50,11 @@
       </div>
 
       <div class="all-cards-grid">
-        <div class="card-item">
+
+        <!-- CARD SOFTWARE EXEMPLO -->
+        <div class="card-item software" onclick="abrirModal('modal-dashboard')" role="button" tabindex="0">
           <div class="card-image">
-            <img src="assets/img/dashboard-myna.png" alt="Interface software com Next.js framework Mynaui">
+            <img src="assets/img/dashboard-myna.png" alt="Interface software com Next.js framework Mynaui" />
           </div>
           <div class="card-info">
             <h2>Interface com Next.js</h2>
@@ -55,13 +62,15 @@
               componentes Myna/ShadCN. Ele simula um sistema de gerenciamento de alunos para uma academia...</p>
           </div>
           <div class="card-actions">
-            <a href="https://github.com/IsHirog/dashboard-myna" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://github.com/IsHirog/dashboard-myna" target="_blank" onclick="event.stopPropagation()"><i
+                class="fa fa-github"></i></a>
           </div>
         </div>
 
-        <div class="card-item">
+        <!-- CARD SOFTWARE EXEMPLO 2 -->
+        <div class="card-item software" onclick="abrirModal('modal-gemini')" role="button" tabindex="0">
           <div class="card-image">
-            <img src="assets/img/IA-LLM.png" alt="Chat com Gemini AI - Lógica Proposicional">
+            <img src="assets/img/IA-LLM.png" alt="Chat com Gemini AI - Lógica Proposicional" />
           </div>
           <div class="card-info">
             <h2>Gemini AI-Lógica Proposicional</h2>
@@ -69,27 +78,15 @@
               simples em Flask que usa a API Gemini...</p>
           </div>
           <div class="card-actions">
-            <a href="https://github.com/IsHirog/ChatDeLogicaLLM" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://github.com/IsHirog/ChatDeLogicaLLM" target="_blank" onclick="event.stopPropagation()"><i
+                class="fa fa-github"></i></a>
           </div>
         </div>
 
-        <div class="card-item">
+        <!-- CARD HARDWARE EXEMPLO -->
+        <div class="card-item hardware" onclick="abrirModal('modal-handse')" role="button" tabindex="0">
           <div class="card-image">
-            <img src="assets/img/RSA.png" alt="Criptografia RSA com GMP">
-          </div>
-          <div class="card-info">
-            <h2>RSA-GMP</h2>
-            <p>O repositório "RSA em C com GMP" implementa o algoritmo RSA (geração de chaves, criptografia,
-              descriptografia) em C usando a biblioteca GMP para grandes números.</p>
-          </div>
-          <div class="card-actions">
-            <a href="https://github.com/IsHirog/RSA" target="_blank"><i class="fa fa-github"></i></a>
-          </div>
-        </div>
-
-        <div class="card-item">
-          <div class="card-image">
-            <img src="assets/img/hand-se.png" alt="Braço Robótico Hand'se">
+            <img src="assets/img/hand-se.png" alt="Braço Robótico Hand'se" />
           </div>
           <div class="card-info">
             <h2>Hand'se - Braço Robótico</h2>
@@ -97,23 +94,42 @@
               movimentos via serial ou gestos. Integração com PCA9685 e servos para interação com o ambiente.</p>
           </div>
           <div class="card-actions">
-            <a href="https://github.com/IsHirog/Hand-se.git" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://github.com/IsHirog/Hand-se.git" target="_blank" onclick="event.stopPropagation()"><i
+                class="fa fa-github"></i></a>
           </div>
         </div>
 
-        <div class="card-item">
+        <!-- CARD SOFTWARE EXEMPLO 2 -->
+        <div class="card-item software" onclick="abrirModal('modal-rsa')" role="button" tabindex="0">
           <div class="card-image">
-            <img src="assets/img/encurta.png" alt="Interface do Encurtador de Links EncurtaCu">
+            <img src="assets/img/RSA.png" alt="RSA-GMP" />
+          </div>
+          <div class="card-info">
+            <h2>RSA-GMP</h2>
+            <p>O repositório "RSA em C com GMP" implementa o algoritmo RSA (geração de chaves, criptografia,
+              descriptografia) em C usando a biblioteca GMP para grandes números...</p>
+          </div>
+          <div class="card-actions">
+            <a href="https://github.com/IsHirog/ChatDeLogicaLLM" target="_blank" onclick="event.stopPropagation()"><i
+                class="fa fa-github"></i></a>
+          </div>
+        </div>
+
+        <div class="card-item software" onclick="abrirModal('modal-encurta')" role="button" tabindex="0">
+          <div class="card-image">
+            <img src="assets/img/encurta.png" alt="RSA-GMP" />
           </div>
           <div class="card-info">
             <h2>Encurtador de URLs</h2>
-            <p>Um encurtador de URLs desenvolvido em Java com Spring Boot para criar, armazenar e redirecionar links
-              curtos para URLs originais, utilizando Spring MVC, Spring Data JPA e MySQL.</p>
+            <p>OUm encurtador de URLs desenvolvido em Java com Spring Boot para criar, armazenar e redirecionar links
+              curtos para URLs originais, utilizando Spring MVC, Spring Data JPA e MySQL...</p>
           </div>
           <div class="card-actions">
-            <a href="https://github.com/IsHirog/EncurtaCu" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://github.com/IsHirog/ChatDeLogicaLLM" target="_blank" onclick="event.stopPropagation()"><i
+                class="fa fa-github"></i></a>
           </div>
         </div>
+
 
       </div>
     </section>
@@ -144,6 +160,163 @@
     </section>
   </main>
 
+  <!-- MODAIS -->
+
+  <!-- Modal para Dashboard (Software) -->
+  <div id="modal-dashboard" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal('modal-dashboard')">&times;</span>
+
+      <h2>Dashboard com Next.js</h2>
+
+      <p><strong>Intuito:</strong> Criar uma dashboard para academias com foco em UX e gestão de alunos.</p>
+
+      <p><strong>Tecnologias Utilizadas (Stack):</strong></p>
+      <ul>
+        <li>Next.js + React</li>
+        <li>Tailwind CSS</li>
+        <li>ShadCN/Mynaui</li>
+      </ul>
+
+      <p><strong>Links:</strong></p>
+      <ul>
+        <li><a href="https://github.com/IsHirog/dashboard-myna" target="_blank">GitHub</a></li>
+        <!-- <li><a href="https://meudemo.com" target="_blank">Demo online</a></li> -->
+      </ul>
+
+      <p><strong>Prints da Interface:</strong></p>
+      <div class="galeria">
+        <img src="assets/img/dashboard-myna.png" alt="Dashboard home" />
+        <img src="assets/img/emteste.png" alt="Dashboard alunos" />
+        <img src="assets/img/emteste.png" alt="Dashboard alunos" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para Gemini AI (Software) -->
+  <div id="modal-gemini" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal('modal-gemini')">&times;</span>
+
+      <h2>Gemini AI - Lógica Proposicional</h2>
+
+      <p><strong>Intuito:</strong> Aplicação web para interagir com Lógica Proposicional usando a API Gemini.</p>
+
+      <p><strong>Tecnologias Utilizadas (Stack):</strong></p>
+      <ul>
+        <li>Flask (Python)</li>
+        <li>API Gemini</li>
+        <li>HTML/CSS/JS</li>
+      </ul>
+
+      <p><strong>Links:</strong></p>
+      <ul>
+        <li><a href="https://github.com/IsHirog/ChatDeLogicaLLM" target="_blank">GitHub</a></li>
+      </ul>
+
+      <p><strong>Imagens:</strong></p>
+      <div class="galeria">
+        <img src="assets/img/IA-LLM-screenshot1.png" alt="Screenshot do Chat Gemini" />
+        <img src="assets/img/IA-LLM-screenshot2.png" alt="Outra tela do projeto" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para Hand'se (Hardware) -->
+  <div id="modal-handse" class="modal">
+    <div class="modal-content hardware">
+      <span class="close" onclick="fecharModal('modal-handse')">&times;</span>
+
+      <h2>Hand'se - Braço Robótico</h2>
+
+      <p><strong>Intuito do Projeto:</strong> Criar um braço robótico de baixo custo com controle por gestos para
+        reabilitação e ensino.</p>
+
+      <p><strong>Materiais Utilizados:</strong></p>
+      <ul>
+        <li>Arduino Uno</li>
+        <li>PCA9685 + 6 servos</li>
+        <li>Chassi impresso em 3D (Thingiverse)</li>
+        <li>Python + OpenCV para controle</li>
+      </ul>
+
+      <p><strong>Links Úteis:</strong></p>
+      <ul>
+        <li><a href="https://github.com/IsHirog/Hand-se" target="_blank">GitHub</a></li>
+        <li><a href="https://www.thingiverse.com/thing:xxxxx" target="_blank">Modelo 3D no Thingiverse</a></li>
+      </ul>
+
+      <p><strong>Imagens:</strong></p>
+      <div class="galeria">
+        <img src="assets/img/handse-prototipo.jpg" alt="Protótipo" />
+        <img src="assets/img/handse-esquematico.jpg" alt="Esquemático" />
+      </div>
+    </div>
+  </div>
+  <!-- Vou completar os modais que estão faltando no seu HTML. Os cards que não têm modal correspondente são:
+     - RSA-GMP
+     - Encurtador de URLs
+-->
+
+<!-- Modal para RSA-GMP (Software) -->
+<div id="modal-rsa" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="fecharModal('modal-rsa')">&times;</span>
+
+    <h2>RSA-GMP</h2>
+
+    <p><strong>Intuito:</strong> Implementar o algoritmo RSA com operações matemáticas em grandes números.</p>
+
+    <p><strong>Tecnologias Utilizadas (Stack):</strong></p>
+    <ul>
+      <li>Linguagem C</li>
+      <li>Biblioteca GMP (GNU Multiple Precision Arithmetic Library)</li>
+    </ul>
+
+    <p><strong>Links:</strong></p>
+    <ul>
+      <li><a href="https://github.com/IsHirog/ChatDeLogicaLLM" target="_blank">GitHub</a></li>
+    </ul>
+
+    <p><strong>Capturas:</strong></p>
+    <div class="galeria">
+      <img src="assets/img/RSA.png" alt="RSA Interface ou exemplo de uso" />
+    </div>
+  </div>
+</div>
+
+<!-- Modal para Encurtador de URLs (Software) -->
+<div id="modal-encurta" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="fecharModal('modal-encurta')">&times;</span>
+
+    <h2>Encurtador de URLs</h2>
+
+    <p><strong>Intuito:</strong> Criar, armazenar e redirecionar links curtos para URLs originais.</p>
+
+    <p><strong>Tecnologias Utilizadas (Stack):</strong></p>
+    <ul>
+      <li>Java</li>
+      <li>Spring Boot</li>
+      <li>Spring MVC</li>
+      <li>Spring Data JPA</li>
+      <li>MySQL</li>
+    </ul>
+
+    <p><strong>Links:</strong></p>
+    <ul>
+      <li><a href="https://github.com/IsHirog/ChatDeLogicaLLM" target="_blank">GitHub</a></li>
+    </ul>
+
+    <p><strong>Captura:</strong></p>
+    <div class="galeria">
+      <img src="assets/img/encurta.png" alt="Screenshot do encurtador" />
+    </div>
+  </div>
+</div>
+
+
+  <script src="assets/script/modal.js"></script>
 </body>
 
 </html>

@@ -30,6 +30,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  flex-wrap: wrap;
 }
 
 .redes {
@@ -51,9 +52,12 @@ header {
 /* --- HERO SECTION --- */
 .hero {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
   align-items: center;
-  padding: 10rem;
+  padding: 6rem 2rem;
+  text-align: center;
 }
 
 .textos h1 {
@@ -89,7 +93,10 @@ header {
 /* --- BOTOES --- */
 .botoes {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
+  margin-top: 1rem;
 }
 
 .botoes a {
@@ -114,8 +121,8 @@ header {
 /* --- FOTO DE PERFIL --- */
 .foto-externa {
   position: relative;
-  width: 345px;
-  height: 345px;
+  width: min(80vw, 345px);
+  height: min(80vw, 345px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,22 +133,17 @@ header {
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  padding: 10px;
-  background: conic-gradient(
-    from 90deg,
-    #00aaff 180deg 360deg
-  );
-  box-shadow:
-    0 0 30px #00aaff,
-    0 0 40px #00aaff;
+  padding: 0.6rem;
+  background: conic-gradient(from 90deg, #00aaff 180deg 360deg);
+  box-shadow: 0 0 30px #00aaff, 0 0 40px #00aaff;
   transition: box-shadow 0.4s ease;
   z-index: 1;
 }
 
 .foto {
   position: relative;
-  width: 325px;
-  height: 325px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   overflow: hidden;
   z-index: 2;
@@ -158,10 +160,7 @@ header {
 }
 
 .foto-externa:hover .borda-giratoria {
-  box-shadow:
-    0 0 60px #00aaff,
-    0 0 80px #00aaff,
-    0 0 100px #00aaff;
+  box-shadow: 0 0 60px #00aaff, 0 0 80px #00aaff, 0 0 100px #00aaff;
 }
 
 /* --- PROJETOS --- */
@@ -192,7 +191,7 @@ header {
 /* --- GRID DE CARDS --- */
 .all-cards-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   justify-items: center;
   width: 100%;
@@ -209,9 +208,7 @@ header {
   flex-direction: column;
   text-decoration: none;
   color: inherit;
-  min-width: 250px;
   width: 100%;
-  border: 3px solid transparent;
 }
 
 .card-item:hover {
@@ -220,12 +217,11 @@ header {
 }
 
 .card-item.software {
-  border-color: #00aaff;
+  border: 3px solid #00aaff;
 }
 
 .card-item.software:hover {
   box-shadow: 0 15px 40px rgba(0, 170, 255, 0.6);
-  transform: translateY(-8px);
 }
 
 .card-item.software .card-info h2 {
@@ -233,12 +229,11 @@ header {
 }
 
 .card-item.hardware {
-  border-color: #ff4c4c;
+  border: 3px solid #ff4c4c;
 }
 
 .card-item.hardware:hover {
   box-shadow: 0 15px 40px rgba(255, 76, 76, 0.6);
-  transform: translateY(-8px);
 }
 
 .card-item.hardware .card-info h2 {
@@ -250,7 +245,6 @@ header {
   position: relative;
   overflow: hidden;
   height: 200px;
-  cursor: pointer;
   background-color: #3a3a3a;
   display: flex;
   justify-content: center;
@@ -270,7 +264,6 @@ header {
 
 .card-info {
   padding: 1.5rem;
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -280,13 +273,11 @@ header {
   margin-bottom: 0.75rem;
   font-size: 1.6rem;
   font-family: Oswald, sans-serif;
-  line-height: 1.2;
 }
 
 .card-info p {
   color: #aaaaaa;
   font-size: 1rem;
-  line-height: 1.5;
   margin-bottom: 1rem;
 }
 
@@ -294,7 +285,7 @@ header {
   display: flex;
   gap: 1rem;
   padding: 1rem 1.5rem 1.5rem;
-  border-top: 1px solid #444444;
+  border-top: 1px solid #444;
   margin-top: auto;
 }
 
@@ -323,7 +314,7 @@ header {
   padding-bottom: 2rem;
 }
 
-/* --- MODAL DE DETALHES DO CARD --- */
+/* --- MODAL DE DETALHES --- */
 .modal {
   display: none;
   position: fixed;
@@ -426,114 +417,41 @@ header {
   max-height: 300px;
 }
 
-/* --- MEDIA QUERIES --- */
-@media (min-width: 1201px) {
-  .all-cards-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (max-width: 1200px) {
-  .projetos {
-    padding: 8rem 5rem;
-  }
-  .all-cards-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .hero {
-    padding: 6rem 3rem;
-  }
+/* --- EXTRA RESPONSIVE FIX --- */
+@media (max-width: 360px) {
   .textos h1 {
-    font-size: 3.5rem;
-  }
-  .foto img {
-    width: 280px;
-    height: 280px;
-  }
-  .projetos {
-    padding: 6rem 3rem;
-  }
-  .titulo {
-    text-align: center;
-  }
-  .all-cards-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .card-item {
-    min-width: 320px;
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    padding: 1rem;
-  }
-  .hero {
-    padding: 4rem 1.5rem;
-  }
-  .textos h1 {
-    font-size: 2.8rem;
-  }
-  .foto img {
-    width: 240px;
-    height: 240px;
-  }
-  .projetos,
-  .sobre-mim {
-    padding: 4rem 1.5rem;
-  }
-  .titulo {
-    font-size: 2rem;
-  }
-  .all-cards-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  .card-item {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  .card-image {
-    height: 180px;
-  }
-  .card-info h2 {
-    font-size: 1.4rem;
-  }
-  .card-info p {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    padding: 3rem 1rem;
-  }
-  .textos h1 {
-    font-size: 2.2rem;
-  }
-  .foto img {
-    width: 180px;
-    height: 180px;
-  }
-  .projetos,
-  .sobre-mim {
-    padding: 3rem 1rem;
-  }
-  .titulo {
     font-size: 1.8rem;
   }
-  .all-cards-grid {
-    gap: 1rem;
+
+  .botoes a {
+    padding: 0.8rem;
+    font-size: 1rem;
   }
-  .card-item {
-    max-width: 300px;
-  }
-  .card-image {
+
+  .foto-externa {
+    width: 150px;
     height: 150px;
+  }
+
+  .titulo {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 6rem 7rem;
+  }
+
+  .textos {
+    max-width: 50%;
+    align-items: flex-start;
+  }
+
+  .botoes {
+    justify-content: flex-start;
   }
 }

@@ -455,3 +455,7 @@ header {
     justify-content: flex-start;
   }
 }
+/* Adicione esta classe ao seu arquivo style.css */
+body.modal-open {
+  overflow: hidden;
+}
